@@ -1,0 +1,23 @@
+Pon aqui las fotos (jpg). Nombres EXACTOS (respeta minusculas y guiones):
+
+bolas-pollo.jpg
+bolas-queso.jpg
+fingers-pollo.jpg
+tequenos.jpg
+alitas-kfc.jpg
+aros-cebolla.jpg
+empanada.jpg
+patatas-4-salsas.jpg
+bacon-cheese-fries.jpg
+patatas-kebab.jpg
+hamburguesa-pollo.jpg
+smash-pollo.jpg
+hamburguesa-ternera.jpg
+smash-ternera.jpg
+burrito.jpg
+kebab.jpg
+sandwich-trufado.jpg
+taco-frances.jpg
+ensalada-cesar.jpg
+quesadillas.jpg
+gofre.jpg

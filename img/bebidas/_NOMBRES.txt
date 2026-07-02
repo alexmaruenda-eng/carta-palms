@@ -1,0 +1,19 @@
+Pon aqui los PNG (fondo transparente). Nombres EXACTOS (respeta minusculas y guiones):
+
+coca-cola.png
+fanta.png
+nestea.png
+aquarius.png
+sprite.png
+alhambra-verde.png
+alhambra-especial.png
+radler.png
+cerveza-sin-alcohol.png
+cerveza-sin-gluten.png
+desperados.png
+agua.png
+agua-con-gas.png
+zumo.png
+powerade.png
+red-bull.png
+monster.png
