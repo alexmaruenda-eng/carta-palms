@@ -718,6 +718,51 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
 .prod-price,.bev-price,.en-price,.ci-price,.sig-price,.cafe-p,.cubo-p,.combo-price,.brand-price,.otro-price,.tc-price,.s-price,.chupito-price,.tet-pval,.price-badge,.price-allbadge{white-space:nowrap}
 .prod-price-col{gap:2px}
 .bev-em img,.brand-em img,.en-icon img{width:100%;height:100%;object-fit:contain;padding:1px}
+
+/* ─── Combo: foto completa + texto ─── */
+.combo-card{display:flex;align-items:center;gap:18px}
+.combo-img-wrap{
+  flex:0 0 118px;width:118px;height:118px;
+  position:relative;z-index:2;
+  border-radius:var(--r2);overflow:hidden;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(201,168,76,.22);
+  box-shadow:0 4px 18px rgba(0,0,0,.28);
+}
+.combo-img-wrap img{width:100%;height:100%;object-fit:contain;display:block}
+.combo-body{flex:1;min-width:0;position:relative;z-index:2}
+.combo-body .combo-badge{margin-bottom:8px}
+.combo-body .combo-name{font-size:24px;margin-bottom:5px}
+.combo-body .combo-desc{margin-bottom:11px}
+@media(max-width:420px){
+  .combo-card{gap:14px;padding:18px 16px}
+  .combo-img-wrap{flex:0 0 92px;width:92px;height:92px}
+  .combo-body .combo-name{font-size:21px}
+  .combo-body .combo-desc{font-size:10.5px;line-height:1.6}
+  .combo-price{font-size:34px}
+}
+
+/* ─── Lechuga hamburguesa pollo (tono más suave) ─── */
+.img-lettuce-soft{filter:saturate(.82) hue-rotate(-6deg) brightness(.98)}
+
+/* ─── Zumo sabores ─── */
+.bev-sub{font-size:10.5px;color:var(--gold);opacity:.75;letter-spacing:.04em;margin-top:2px}
+
+/* ─── Foto tetera ─── */
+.tet-photo{width:100%;height:130px;overflow:hidden;border-radius:var(--r2);margin-bottom:14px}
+.tet-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ─── Nota sin alcohol cócteles ─── */
+.noalc-note{font-family:'Outfit',sans-serif;font-size:10.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.72);text-align:center;margin-top:8px}
+
+/* ─── Sub-línea en sig-card (sabores mojito) ─── */
+.sig-sub{font-size:10.5px;color:rgba(255,255,255,.62);letter-spacing:.03em;margin-top:5px;line-height:1.45}
+
+/* ─── Logo marca en spirit-card ─── */
+.s-logo{height:34px;margin-bottom:8px;display:flex;align-items:center}
+.s-logo img{max-height:100%;max-width:96px;width:auto;object-fit:contain;display:block}
+.spirit-card.prem .s-logo img,.lux-row .s-logo img{max-width:110px}
+
 </style>
 </head>
 <body>
@@ -784,32 +829,32 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
       <div class="prod-grid">
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/bolas%20de%20pollo.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=200&h=200&fit=crop&q=80'" alt="Bolas de Pollo" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-top">Más Vendido</span></div><div class="prod-name">Bolas de Pollo</div><div class="prod-desc">Crujientes por fuera, tiernas por dentro</div></div>
+          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-top">Más Vendido</span></div><div class="prod-name">Bolas de Pollo</div><div class="prod-desc">8 uds · Crujientes por fuera, tiernas por dentro</div></div>
           <div class="prod-price-col"><div class="prod-price">6,5€</div></div>
         </div>
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/bolas%20de%20%20queso.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=200&h=200&fit=crop&q=80'" alt="Bolas de Queso" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-veg">Vegetariano</span></div><div class="prod-name">Bolas de Queso</div><div class="prod-desc">Queso fundido con costra dorada crujiente</div></div>
+          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-veg">Vegetariano</span></div><div class="prod-name">Bolas de Queso</div><div class="prod-desc">8 uds · Queso fundido con costra dorada crujiente</div></div>
           <div class="prod-price-col"><div class="prod-price">6,5€</div></div>
         </div>
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/tiras%20de%20pollo.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1562802378-063ec186a863?w=200&h=200&fit=crop&q=80'" alt="Fingers de Pollo" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-rec">Recomendado</span></div><div class="prod-name">Fingers de Pollo</div><div class="prod-desc">Tiras de pollo crujientes perfectas para compartir</div></div>
+          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-rec">Recomendado</span></div><div class="prod-name">Fingers de Pollo</div><div class="prod-desc">8 uds · Tiras de pollo crujientes perfectas para compartir</div></div>
           <div class="prod-price-col"><div class="prod-price">7€</div></div>
         </div>
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/teque%C3%B1os.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=200&fit=crop&q=80'" alt="Tequeños" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-veg">Vegetariano</span><span class="ptag ptag-rec">Recomendado</span></div><div class="prod-name">Tequeños</div><div class="prod-desc">Palitos de masa rellenos de queso derretido</div></div>
+          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-veg">Vegetariano</span><span class="ptag ptag-rec">Recomendado</span></div><div class="prod-name">Tequeños</div><div class="prod-desc">6 uds · Palitos de masa rellenos de queso derretido</div></div>
           <div class="prod-price-col"><div class="prod-price">8€</div></div>
         </div>
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/alitas.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=200&h=200&fit=crop&q=80'" alt="Alitas KFC" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-hot">Especiado</span><span class="ptag ptag-top">Más Vendido</span></div><div class="prod-name">Alitas KFC</div><div class="prod-desc">Rebozado especiado estilo KFC</div></div>
+          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-hot">Especiado</span><span class="ptag ptag-top">Más Vendido</span></div><div class="prod-name">Alitas KFC</div><div class="prod-desc">6 uds · Rebozado especiado estilo KFC</div></div>
           <div class="prod-price-col"><div class="prod-price">7€</div></div>
         </div>
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/aros%20de%20cebolla.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1639024471283-03518883512d?w=200&h=200&fit=crop&q=80'" alt="Aros de Cebolla" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-veg">Vegetariano</span></div><div class="prod-name">Aros de Cebolla</div><div class="prod-desc">Rebozado ligero y dorado, perfectos al punto</div></div>
+          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-veg">Vegetariano</span></div><div class="prod-name">Aros de Cebolla</div><div class="prod-desc">8 uds · Rebozado ligero y dorado, perfectos al punto</div></div>
           <div class="prod-price-col"><div class="prod-price">7€</div></div>
         </div>
         <div class="prod-card">
@@ -820,10 +865,13 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
       </div>
       <div class="combo-wrap">
         <div class="combo-card">
-          <div class="combo-badge">⭐ Mejor Valor</div>
-          <div class="combo-name">Combo PALMS</div>
-          <div class="combo-desc">2 alitas · 2 fingers · 4 bolas de queso<br>2 aros de cebolla · patatas con queso</div>
-          <div class="combo-footer"><div class="combo-price">9,5€</div><div class="combo-note">El mejor valor<br>de la carta</div></div>
+          <div class="combo-img-wrap"><img src="img/comida/combo.jpg" alt="Combo PALMS" loading="lazy" onerror="this.closest('.combo-img-wrap').remove()"></div>
+          <div class="combo-body">
+            <div class="combo-badge">⭐ Mejor Valor</div>
+            <div class="combo-name">Combo PALMS</div>
+            <div class="combo-desc">2 alitas · 2 fingers · 4 bolas de queso<br>2 aros de cebolla · patatas con queso</div>
+            <div class="combo-footer"><div class="combo-price">9,5€</div><div class="combo-note">El mejor valor<br>de la carta</div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -857,7 +905,7 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
     <div class="prod-section">
       <div class="prod-grid">
         <div class="prod-card">
-          <div class="prod-card-img-wrap"><img src="img/comida/hamburguesa%20de%20pollo.jpg" style="object-position:21% center" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop&q=80'" alt="Hamburguesa Pollo" loading="lazy"></div>
+          <div class="prod-card-img-wrap"><img class="img-lettuce-soft" src="img/comida/hamburguesa%20de%20pollo.jpg" style="object-position:21% center" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop&q=80'" alt="Hamburguesa Pollo" loading="lazy"></div>
           <div class="prod-card-body"><div class="prod-name">Hamburguesa Pollo</div><div class="prod-desc">Jugosa pechuga de pollo crujiente en pan brioche, con lechuga, tomate, cebolla morada, queso y salsa de la casa.</div></div>
           <div class="prod-price-col"><div class="prod-price">9€</div></div>
         </div>
@@ -890,7 +938,7 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
       <div class="prod-grid">
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/burrito%20palms.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=200&h=200&fit=crop&q=80'" alt="Burrito PALMS" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-rec">Recomendado</span></div><div class="prod-name">Burrito PALMS</div><div class="prod-desc">Lechuga, tomate, queso, salsa Palms y pollo</div></div>
+          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-rec">Recomendado</span></div><div class="prod-name">Burrito PALMS</div><div class="prod-desc">Pollo, lechuga, tomate, queso y salsa Palms</div></div>
           <div class="prod-price-col"><div class="prod-price">9€</div></div>
         </div>
         <div class="prod-card">
@@ -910,12 +958,12 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
         </div>
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/ensalada.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&h=200&fit=crop&q=80'" alt="Ensalada César" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-gf">Sin Gluten</span></div><div class="prod-name">Ensalada César</div><div class="prod-desc">Lechuga, tomate, queso, salsa césar y pollo</div></div>
+          <div class="prod-card-body"><div class="prod-name">Ensalada César</div><div class="prod-desc">Lechuga, tomate, queso, salsa césar y pollo</div></div>
           <div class="prod-price-col"><div class="prod-price">8,5€</div></div>
         </div>
         <div class="prod-card">
           <div class="prod-card-img-wrap"><img src="img/comida/quesadilla.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1618449840665-9ed506d73a34?w=200&h=200&fit=crop&q=80'" alt="Quesadillas PALMS" loading="lazy"></div>
-          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-rec">Recomendado</span></div><div class="prod-name">Quesadillas PALMS</div><div class="prod-desc">Lechuga, tomate, mix quesos, pollo y salsa Palms</div></div>
+          <div class="prod-card-body"><div class="prod-tags"><span class="ptag ptag-rec">Recomendado</span></div><div class="prod-name">Quesadillas PALMS</div><div class="prod-desc">Pollo, lechuga, tomate, mix quesos y salsa Palms</div></div>
           <div class="prod-price-col"><div class="prod-price">9€</div></div>
         </div>
       </div>
@@ -946,6 +994,7 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
     <div class="cat-title">Cócteles<em>Bar & Lounge</em></div>
     <div class="cat-deco"><div class="cd-l"></div><div class="cd-d"></div><div class="cd-d"></div><div class="cd-d"></div><div class="cd-l r"></div></div>
     <div class="price-allbadge">Todos los cócteles · 8€</div>
+    <div class="noalc-note">Todos se pueden preparar sin alcohol</div>
   </div>
   <div class="subcat-bar" id="sb-cocteles">
     <button class="subcat-btn active" onclick="goSub('cocteles','firma',this)">⭐ Firma PALMS</button>
@@ -955,21 +1004,21 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <!-- FIRMA -->
   <div class="subpage active" id="sp-cocteles-firma">
     <div class="sig-grid">
-      <div class="sig-card"><img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=700&h=390&fit=crop&q=80" alt="Cocoloco" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Cocoloco</div><div class="sig-ing">Piña · Coco · Frambuesa · Ron · Red Bull Coco</div></div><div class="sig-price">8€</div></div>
-      <div class="sig-card"><img src="https://images.unsplash.com/photo-1590579491624-f98f36d4c763?w=700&h=390&fit=crop&q=80" alt="Mangoloco" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Mangoloco</div><div class="sig-ing">Melón · Maracuyá · Vodka · Monster Mango Loco</div></div><div class="sig-price">8€</div></div>
-      <div class="sig-card"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=700&h=390&fit=crop&q=80" alt="Chufalada" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Chufalada</div><div class="sig-ing">Horchata · Coco · Amaretto · Ron</div></div><div class="sig-price">8€</div></div>
-      <div class="sig-card"><img src="https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=700&h=390&fit=crop&q=80" alt="Almadraba" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Almadraba</div><div class="sig-ing">Vodka · Manzana Verde · Maracuyá · Lima · Red Bull</div></div><div class="sig-price">8€</div></div>
-      <div class="sig-card"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=700&h=390&fit=crop&q=80" alt="Cantalar" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Cantalar</div><div class="sig-ing">Ron · Sandía · Melón · Mango · Fanta de Limón</div></div><div class="sig-price">8€</div></div>
+      <div class="sig-card"><img src="img/cocteles/cocoloco.jpg" alt="Cocoloco" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1536935338788-846bb9981813?w=700&h=390&fit=crop&q=80'" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Cocoloco</div><div class="sig-ing">Ron · Red Bull Coco · Piña · Coco · Frambuesa</div></div><div class="sig-price">8€</div></div>
+      <div class="sig-card"><img src="img/cocteles/mangoloco.jpg" alt="Mangoloco" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590579491624-f98f36d4c763?w=700&h=390&fit=crop&q=80'" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Mangoloco</div><div class="sig-ing">Vodka · Monster Mango Loco · Melón · Maracuyá</div></div><div class="sig-price">8€</div></div>
+      <div class="sig-card"><img src="img/cocteles/chufalada.jpg" alt="Chufalada" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=700&h=390&fit=crop&q=80'" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Chufalada</div><div class="sig-ing">Ron · Amaretto · Horchata · Coco</div></div><div class="sig-price">8€</div></div>
+      <div class="sig-card"><img src="img/cocteles/almadraba.jpg" alt="Almadraba" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=700&h=390&fit=crop&q=80'" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Almadraba</div><div class="sig-ing">Vodka · Red Bull · Manzana Verde · Maracuyá · Lima</div></div><div class="sig-price">8€</div></div>
+      <div class="sig-card"><img src="img/cocteles/cantalar.jpg" alt="Cantalar" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544145945-f90425340c7e?w=700&h=390&fit=crop&q=80'" loading="lazy"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">⭐ Creación PALMS</div><div class="sig-name">Cantalar</div><div class="sig-ing">Ron · Fanta de Limón · Sandía · Melón · Mango</div></div><div class="sig-price">8€</div></div>
     </div>
   </div>
 
   <!-- CLÁSICOS -->
   <div class="subpage" id="sp-cocteles-clasicos">
-    <div class="classic-list">
-      <div class="classic-item"><div class="ci-emoji" style="background:#FFF5E8">🍋</div><div class="ci-info"><div class="ci-name">Margarita de Maracuyá</div><div class="ci-desc">Tequila, triple seco, maracuyá fresco y borde de sal</div><div class="flavor-pills"><span class="fp">Tropical</span><span class="fp">Clásico</span></div></div><div class="ci-price">8€</div></div>
-      <div class="classic-item"><div class="ci-emoji" style="background:#FFFBF0">🍍</div><div class="ci-info"><div class="ci-name">Piña Colada</div><div class="ci-desc">Ron blanco, crema de coco y zumo de piña natural</div><div class="flavor-pills"><span class="fp">Clásico</span><span class="fp">Sin alcohol disponible</span></div></div><div class="ci-price">8€</div></div>
-      <div class="classic-item"><div class="ci-emoji" style="background:#F0FFF6">🌿</div><div class="ci-info"><div class="ci-name">Mojito Clásico o de Sabores</div><div class="ci-desc">Ron blanco, menta fresca, lima y soda</div><div class="flavor-pills"><span class="fp">Clásico</span><span class="fp">Sandía</span><span class="fp">Melón</span><span class="fp">Mango</span><span class="fp">Maracuyá</span><span class="fp">Coco</span><span class="fp">Piña</span></div></div><div class="ci-price">8€</div></div>
-      <div class="classic-item"><div class="ci-emoji" style="background:#F3FFF5">🖤</div><div class="ci-info"><div class="ci-name">Mojito de Jäger</div><div class="ci-desc">Jägermeister, menta fresca, lima, azúcar y soda</div><div class="flavor-pills"><span class="fp">Especial</span></div></div><div class="ci-price">8€</div></div>
+    <div class="sig-grid">
+      <div class="sig-card"><img src="img/cocteles/margarita.jpg" alt="Margarita de Maracuyá" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700&h=390&fit=crop&q=80'"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">Clásico</div><div class="sig-name">Margarita de Maracuyá</div><div class="sig-ing">Tequila · Triple Seco · Maracuyá · Borde de sal</div></div><div class="sig-price">8€</div></div>
+      <div class="sig-card"><img src="img/cocteles/pina-colada.jpg" alt="Piña Colada" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1582819509237-d5b75f20ff7a?w=700&h=390&fit=crop&q=80'"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">Clásico</div><div class="sig-name">Piña Colada</div><div class="sig-ing">Ron blanco · Crema de coco · Zumo de piña</div></div><div class="sig-price">8€</div></div>
+      <div class="sig-card"><img src="img/cocteles/mojito.jpg" alt="Mojito Clásico o de Sabores" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=700&h=390&fit=crop&q=80'"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">Clásico</div><div class="sig-name">Mojito Clásico o de Sabores</div><div class="sig-ing">Ron blanco · Menta fresca · Lima · Soda</div><div class="sig-sub">Sandía · Melón · Mango · Maracuyá · Coco · Piña</div></div><div class="sig-price">8€</div></div>
+      <div class="sig-card"><img src="img/cocteles/mojito-jager.jpg" alt="Mojito de Jäger" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1583394838336-acd977736f90?w=700&h=390&fit=crop&q=80'"><div class="sig-grad"></div><div class="sig-body"><div class="sig-badge">Clásico</div><div class="sig-name">Mojito de Jäger</div><div class="sig-ing">Jägermeister · Menta fresca · Lima · Soda</div></div><div class="sig-price">8€</div></div>
     </div>
   </div>
 
@@ -1101,7 +1150,7 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
       <div class="bev-list">
         <div class="bev-item"><div class="bev-em" style="background:#EFF8FF"><img src="img/bebidas/agua.png" alt="Agua" loading="lazy" onerror="this.replaceWith(document.createTextNode('💧'))"></div><div class="bev-info"><div class="bev-name">Agua</div></div><div class="bev-price">2€</div></div>
         <div class="bev-item"><div class="bev-em" style="background:#EFF8FF"><img src="img/bebidas/agua-con-gas.png" alt="Agua con Gas" loading="lazy" onerror="this.replaceWith(document.createTextNode('💦'))"></div><div class="bev-info"><div class="bev-name">Agua con Gas</div></div><div class="bev-price">3€</div></div>
-        <div class="bev-item"><div class="bev-em" style="background:#FFF8F0"><img src="img/bebidas/zumo.png" alt="Zumo" loading="lazy" onerror="this.replaceWith(document.createTextNode('🍊'))"></div><div class="bev-info"><div class="bev-name">Zumo</div></div><div class="bev-price">2,50€</div></div>
+        <div class="bev-item"><div class="bev-em" style="background:#FFF8F0"><img src="img/bebidas/zumo.png" alt="Zumo" loading="lazy" onerror="this.replaceWith(document.createTextNode('🍊'))"></div><div class="bev-info"><div class="bev-name">Zumo</div><div class="bev-sub">Piña · Melocotón</div></div><div class="bev-price">2,50€</div></div>
         <div class="bev-item"><div class="bev-em" style="background:#F0F8FF"><img src="img/bebidas/powerade.png" alt="Powerade" loading="lazy" onerror="this.replaceWith(document.createTextNode('⚡'))"></div><div class="bev-info"><div class="bev-name">Powerade</div></div><div class="bev-price">3€</div></div>
       </div>
       <div class="bev-label mt20">Energéticas</div>
@@ -1124,6 +1173,7 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
     <div class="bev-section">
       <div class="tet-card">
         <div class="tet-head">
+          <div class="tet-photo"><img src="img/bebidas/tetera.png" alt="Tetera" loading="lazy" onerror="this.closest('.tet-photo').remove()"></div>
           <div class="tet-title">🫖 Teteras</div>
           <div class="tet-prices">
             <div class="tet-p"><div class="tet-pval">3€</div><div class="tet-plab">Vaso</div></div>
@@ -1165,14 +1215,14 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage active" id="sp-copas-ginebra">
     <div class="spirits-section">
       <div class="tier-group"><div class="tier-label-row">Selección · 6,5€</div><div class="spirit-grid">
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Seagram's</div><div class="s-origin">Ginebra clásica, suave y versátil</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Nordés</div><div class="s-origin">Gin atlántica, aromas florales</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Puerto de Indias Fresa</div><div class="s-origin">Gin premium de fresa natural</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Puerto de Indias Melón</div><div class="s-origin">Gin tropical con aroma a melón</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/seagrams.png" alt="Seagram's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Seagram's</div><div class="s-origin">Ginebra clásica, suave y versátil</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/nordes.png" alt="Nordés" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Nordés</div><div class="s-origin">Gin atlántica, aromas florales</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/puerto-indias-fresa.png" alt="Puerto de Indias Fresa" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Puerto de Indias Fresa</div><div class="s-origin">Gin premium de fresa natural</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/puerto-indias-melon.png" alt="Puerto de Indias Melón" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Puerto de Indias Melón</div><div class="s-origin">Gin tropical con aroma a melón</div><div class="s-price">6,5€</div></div>
       </div></div>
       <div class="tier-group"><div class="tier-label-row">Premium · 8,5€</div><div class="spirit-grid">
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-name">Martin Miller's</div><div class="s-origin">Destilado en Londres, acabado en Islandia</div><div class="s-price">8,5€</div></div>
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-name">Hendrick's</div><div class="s-origin">Con pepino y pétalos de rosa</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/martin-millers.png" alt="Martin Miller's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Martin Miller's</div><div class="s-origin">Destilado en Londres, acabado en Islandia</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/hendricks.png" alt="Hendrick's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Hendrick's</div><div class="s-origin">Con pepino y pétalos de rosa</div><div class="s-price">8,5€</div></div>
       </div></div>
     </div>
   </div>
@@ -1181,12 +1231,12 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage" id="sp-copas-ron">
     <div class="spirits-section">
       <div class="tier-group"><div class="tier-label-row">Selección · 6,5€</div><div class="spirit-grid">
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Barceló</div><div class="s-origin">Ron dominicano suave y aromático</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Brugal</div><div class="s-origin">Ron seco y cristalino</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Matusalem</div><div class="s-origin">Ron cubano, suave y elegante</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/barcelo.png" alt="Barceló" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Barceló</div><div class="s-origin">Ron dominicano suave y aromático</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/brugal.png" alt="Brugal" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Brugal</div><div class="s-origin">Ron seco y cristalino</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/matusalem.png" alt="Matusalem" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Matusalem</div><div class="s-origin">Ron cubano, suave y elegante</div><div class="s-price">6,5€</div></div>
       </div></div>
-      <div class="tier-group"><div class="tier-label-row">Lujo · 10€</div><div class="spirit-grid">
-        <div class="spirit-card lux"><span class="s-tier t-lux">⭐ Lujo</span><div class="lux-row"><div><div class="s-name">Zacapa</div><div class="s-origin">Ron guatemalteco envejecido a gran altitud</div></div><div class="s-price">10€</div></div></div>
+      <div class="tier-group"><div class="tier-label-row">Premium · 10€</div><div class="spirit-grid">
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="lux-row"><div><div class="s-logo"><img src="img/copas/zacapa.png" alt="Zacapa" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Zacapa</div><div class="s-origin">Ron guatemalteco envejecido a gran altitud</div></div><div class="s-price">10€</div></div></div>
       </div></div>
     </div>
   </div>
@@ -1195,14 +1245,12 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage" id="sp-copas-whisky">
     <div class="spirits-section">
       <div class="tier-group"><div class="tier-label-row">Selección · 6,5€</div><div class="spirit-grid">
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Red Label</div><div class="s-origin">Blend escocés, sabor ahumado suave</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/red-label.png" alt="Red Label" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Red Label</div><div class="s-origin">Blend escocés, sabor ahumado suave</div><div class="s-price">6,5€</div></div>
       </div></div>
-      <div class="tier-group"><div class="tier-label-row">Premium · 8,5€</div><div class="spirit-grid">
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-name">Black Label</div><div class="s-origin">12 años, sabor complejo y ahumado</div><div class="s-price">8,5€</div></div>
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-name">Jack Daniel's</div><div class="s-origin">Tennessee Whiskey, notas de vainilla</div><div class="s-price">8,5€</div></div>
-      </div></div>
-      <div class="tier-group"><div class="tier-label-row">Lujo · 10€</div><div class="spirit-grid">
-        <div class="spirit-card lux"><span class="s-tier t-lux">⭐ Lujo</span><div class="lux-row"><div><div class="s-name">The Macallan</div><div class="s-origin">Single malt escocés, icono mundial</div></div><div class="s-price">10€</div></div></div>
+      <div class="tier-group"><div class="tier-label-row">Premium</div><div class="spirit-grid">
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/black-label.png" alt="Black Label" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Black Label</div><div class="s-origin">12 años, sabor complejo y ahumado</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/jack-daniels.png" alt="Jack Daniel's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Jack Daniel's</div><div class="s-origin">Tennessee Whiskey, notas de vainilla</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/macallan.png" alt="The Macallan" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">The Macallan</div><div class="s-origin">Single malt escocés, icono mundial</div><div class="s-price">10€</div></div>
       </div></div>
     </div>
   </div>
@@ -1211,11 +1259,11 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage" id="sp-copas-vodka">
     <div class="spirits-section">
       <div class="tier-group"><div class="tier-label-row">Selección · 6,5€</div><div class="spirit-grid">
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-name">Absolut</div><div class="s-origin">Vodka sueco, puro y cristalino</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/absolut.png" alt="Absolut" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Absolut</div><div class="s-origin">Vodka sueco, puro y cristalino</div><div class="s-price">6,5€</div></div>
       </div></div>
       <div class="tier-group"><div class="tier-label-row">Premium · 8,5€</div><div class="spirit-grid">
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-name">Grey Goose</div><div class="s-origin">Vodka francés, trigo de la Beauce</div><div class="s-price">8,5€</div></div>
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-name">Belvedere</div><div class="s-origin">Vodka polaco, centeno Dankowskie</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/grey-goose.png" alt="Grey Goose" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Grey Goose</div><div class="s-origin">Vodka francés, trigo de la Beauce</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/belvedere.png" alt="Belvedere" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Belvedere</div><div class="s-origin">Vodka polaco, centeno Dankowskie</div><div class="s-price">8,5€</div></div>
       </div></div>
     </div>
   </div>
@@ -1257,16 +1305,16 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
     <!-- Tipos de cachimba -->
     <div class="tier-cards">
       <div class="tier-card tc-rubio">
-        <div class="tc-left"><div class="tc-icon">🌾</div><div><div class="tc-badge b-rubio">Entrada</div><div class="tc-name">Rubio</div><div class="tc-desc">Tabaco rubio, sabor suave y humo ligero</div></div></div>
-        <div class="tc-right"><div class="tc-price">12€</div><div class="tc-unit">por sesión</div></div>
+        <div class="tc-left"><div><div class="tc-badge b-rubio">Entrada</div><div class="tc-name">Rubio</div></div></div>
+        <div class="tc-right"><div class="tc-price">12€</div></div>
       </div>
       <div class="tier-card tc-fusion">
-        <div class="tc-left"><div class="tc-icon">✨</div><div><div class="tc-badge b-fusion">Popular</div><div class="tc-name">Fusión</div><div class="tc-desc">Mezcla equilibrada, sabor intenso y humo denso</div></div></div>
-        <div class="tc-right"><div class="tc-price">14€</div><div class="tc-unit">por sesión</div></div>
+        <div class="tc-left"><div><div class="tc-badge b-fusion">Popular</div><div class="tc-name">Fusión</div></div></div>
+        <div class="tc-right"><div class="tc-price">14€</div></div>
       </div>
       <div class="tier-card tc-negro">
-        <div class="tc-left"><div class="tc-icon">🖤</div><div><div class="tc-badge b-negro">⭐ Premium</div><div class="tc-name">Negro</div><div class="tc-desc">Máxima intensidad, humo espeso y sabor profundo</div></div></div>
-        <div class="tc-right"><div class="tc-price">16€</div><div class="tc-unit">por sesión</div></div>
+        <div class="tc-left"><div><div class="tc-badge b-negro">⭐ Premium</div><div class="tc-name">Negro</div></div></div>
+        <div class="tc-right"><div class="tc-price">16€</div></div>
       </div>
     </div>
 
@@ -1274,7 +1322,7 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
     <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.2),transparent);margin:28px 0 4px"></div>
 
     <!-- Mezclas recomendadas -->
-    <div class="mezclas-intro-card"><div class="mic-icon">💡</div><div><div class="mic-title">Mezclas Recomendadas</div><div class="mic-sub">Cuéntanos tu estado de ánimo y te recomendamos</div></div></div>
+    <div class="mezclas-intro-card"><div class="mic-icon">💡</div><div><div class="mic-title">Mezclas Recomendadas</div></div></div>
 
     <div class="mezcla-cat">Dulces &amp; Frescos</div>
     <div class="mezclas-grid">
@@ -1319,7 +1367,7 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="ft-line"></div>
   <div class="ft-links">
     <a href="https://www.instagram.com/palms.lounge/" target="_blank" rel="noopener" class="ft-link"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</a>
-    <a href="#" class="ft-link"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Ubicación</a>
+    <a href="https://share.google/kK0NUolXMFXufFf9b" target="_blank" rel="noopener" class="ft-link"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Ubicación</a>
   </div>
   <div class="ft-copy">© 2025 PALMS Lounge · Alicante · Todos los derechos reservados</div>
 </footer>
