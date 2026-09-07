@@ -1,19 +1,29 @@
-Pon aqui los PNG (fondo transparente). Nombres EXACTOS (respeta minusculas y guiones):
+Imagenes de esta carpeta. Nombres EXACTOS (minusculas, guiones y extension).
 
-coca-cola.png
-fanta.png
-nestea.png
-aquarius.png
-sprite.png
-alhambra-verde.png
-alhambra-especial.png
-radler.png
-cerveza-sin-alcohol.png
-cerveza-sin-gluten.png
-desperados.png
-agua.png
-agua-con-gas.png
-zumo.png
-powerade.png
-red-bull.png
-monster.png
+[OK]         ya esta en el repositorio
+[FALTA]      pendiente de anadir la foto/logo
+[REEMPLAZAR] existe pero el cliente pidio uno nuevo
+
+[OK]         Aquarius-Logo.png
+[OK]         Nestea-logo.png
+[OK]         Sprite_2022.svg.png
+[OK]         agua.png
+[OK]         alhambra especial.png
+[OK]         alhambra verde.png
+[OK]         coca-cola-logo-0.png
+[OK]         desperados.png
+[OK]         fanta-logo-png_seeklogo-326232.png
+[OK]         green-monster-energy-png-logo-18.png
+[OK]         powerade.png
+[OK]         radler.png
+[OK]         red-bull-logo-transparent-background-wallpaper-4.png
+[OK]         sin alcohol 0.0.png
+[OK]         singluten.png
+[FALTA]      tetera.png
+[OK]         tinto-de-verano-la-casera.png
+[FALTA]      tinto-de-verano-preparado.jpg
+[FALTA]      vino-blanco-amor-amar.png
+[FALTA]      zumo.png
+
+NOTA: Logos de marca en PNG con fondo transparente.
+"agua.png" es el logo de Solan de Cabras y se usa en AGUA CON GAS.
