@@ -12,8 +12,8 @@ Imagenes de esta carpeta. Nombres EXACTOS (minusculas, guiones y extension).
 [OK]         empanada argentina.jpg
 [OK]         ensalada.jpg
 [FALTA]      gofre.jpg
-[REEMPLAZAR] hamburguesa de pollo.jpg   <- Hamburguesa Pollo
-[REEMPLAZAR] hamburguesa de ternera.jpg   <- Hamburguesa Ternera
+[OK]         hamburguesa de pollo.jpg   <- foto nueva colocada
+[OK]         hamburguesa de ternera.jpg   <- foto nueva colocada
 [OK]         kebap.jpg
 [OK]         patatas 4 salsas.jpg
 [OK]         patatas bacon queso.jpg
