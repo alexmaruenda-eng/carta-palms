@@ -1,0 +1,16 @@
+Imagenes de esta carpeta. Nombres EXACTOS (minusculas, guiones y extension).
+
+[OK]         ya esta en el repositorio
+[FALTA]      pendiente de anadir la foto/logo
+[REEMPLAZAR] existe pero el cliente pidio uno nuevo
+
+[FALTA]      almadraba.jpg
+[FALTA]      cantalar.jpg
+[FALTA]      cocoloco.jpg
+[FALTA]      mangoloco.jpg
+[FALTA]      mojito-jager.jpg
+[FALTA]      mojito.jpg
+[FALTA]      pina-colada.jpg
+[FALTA]      pornstar-martini.jpg
+
+NOTA: Fotos de coctel, horizontales (aprox. 700x390).
