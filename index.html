@@ -543,8 +543,9 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
 .otros-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .otro-card{background:var(--card);border-radius:var(--r2);padding:14px;border:1px solid rgba(0,0,0,.05);box-shadow:0 2px 10px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:transform .2s}
 .otro-card:active{transform:scale(.97)}
-.otro-em{font-size:22px;margin-bottom:8px;height:26px;display:flex;align-items:center}
-.otro-em img{max-height:26px;max-width:86px;width:auto;object-fit:contain;display:block}
+.otro-em{font-size:22px;margin-bottom:8px;height:34px;display:flex;align-items:center}
+.otro-em img{max-height:100%;max-width:92px;width:auto;height:auto;object-fit:contain;display:block;
+  transform:scale(var(--k,1));transform-origin:left center}
 .otro-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--txt);flex:1}
 .otro-price{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--g3);margin-top:8px;align-self:flex-end}
 
@@ -758,10 +759,12 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
 .sig-sub{font-size:10.5px;color:rgba(255,255,255,.62);letter-spacing:.03em;margin-top:5px;line-height:1.45}
 
 /* ─── Logo marca en spirit-card ─── */
-.s-logo{height:34px;margin-bottom:8px;display:flex;align-items:center}
-.s-logo img{max-height:100%;max-width:96px;width:auto;object-fit:contain;display:block}
+/* Caja de logo comun a todas las marcas. El tamano se equilibra por AREA optica
+   (--k) para que un wordmark ancho y un logo cuadrado pesen visualmente igual. */
+.s-logo{height:42px;margin-bottom:8px;display:flex;align-items:center}
+.s-logo img{max-height:100%;max-width:104px;width:auto;height:auto;object-fit:contain;display:block;
+  transform:scale(var(--k,1));transform-origin:left center}
 .s-logo.inv img{filter:invert(1)}
-.spirit-card.prem .s-logo img,.lux-row .s-logo img{max-width:110px}
 
 </style>
 </head>
@@ -1204,14 +1207,14 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage active" id="sp-copas-ginebra">
     <div class="spirits-section">
       <div class="tier-group"><div class="tier-label-row">Selección · 6,5€</div><div class="spirit-grid">
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/seagrams.svg" alt="Seagram's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Seagram's</div><div class="s-origin">Ginebra clásica, suave y versátil</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/nordes.png" alt="Nordés" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Nordés</div><div class="s-origin">Gin atlántica, aromas florales</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/puerto-indias-fresa.png" alt="Puerto de Indias Fresa" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Puerto de Indias Fresa</div><div class="s-origin">Gin premium de fresa natural</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/puerto-indias-melon.png" alt="Puerto de Indias Melón" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Puerto de Indias Melón</div><div class="s-origin">Gin tropical con aroma a melón</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/seagrams.svg" style="--k:0.85" alt="Seagram's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Seagram's</div><div class="s-origin">Ginebra clásica, suave y versátil</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/nordes.svg" style="--k:1.18" alt="Nordés" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Nordés</div><div class="s-origin">Gin atlántica, aromas florales</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/puerto-indias.svg" style="--k:0.92" alt="Puerto de Indias Fresa" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Puerto de Indias Fresa</div><div class="s-origin">Gin premium de fresa natural</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/puerto-indias.svg" style="--k:0.92" alt="Puerto de Indias Melón" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Puerto de Indias Melón</div><div class="s-origin">Gin tropical con aroma a melón</div><div class="s-price">6,5€</div></div>
       </div></div>
       <div class="tier-group"><div class="tier-label-row">Premium · 8,5€</div><div class="spirit-grid">
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/martin-millers.png" alt="Martin Miller's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Martin Miller's</div><div class="s-origin">Destilado en Londres, acabado en Islandia</div><div class="s-price">8,5€</div></div>
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/hendricks.png" alt="Hendrick's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Hendrick's</div><div class="s-origin">Con pepino y pétalos de rosa</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/martin-millers.svg" style="--k:0.91" alt="Martin Miller's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Martin Miller's</div><div class="s-origin">Destilado en Londres, acabado en Islandia</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/hendricks.svg" style="--k:0.99" alt="Hendrick's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Hendrick's</div><div class="s-origin">Con pepino y pétalos de rosa</div><div class="s-price">8,5€</div></div>
       </div></div>
     </div>
   </div>
@@ -1220,12 +1223,12 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage" id="sp-copas-ron">
     <div class="spirits-section">
       <div class="tier-group"><div class="tier-label-row">Selección · 6,5€</div><div class="spirit-grid">
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/barcelo.png" alt="Barceló" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Barceló</div><div class="s-origin">Ron dominicano suave y aromático</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/brugal.png" alt="Brugal" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Brugal</div><div class="s-origin">Ron seco y cristalino</div><div class="s-price">6,5€</div></div>
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/matusalem.png" alt="Matusalem" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Matusalem</div><div class="s-origin">Ron cubano, suave y elegante</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/barcelo.png" style="--k:0.85" alt="Barceló" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Barceló</div><div class="s-origin">Ron dominicano suave y aromático</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/brugal.png" style="--k:1.02" alt="Brugal" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Brugal</div><div class="s-origin">Ron seco y cristalino</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/matusalem.svg" style="--k:0.93" alt="Matusalem" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Matusalem</div><div class="s-origin">Ron cubano, suave y elegante</div><div class="s-price">6,5€</div></div>
       </div></div>
       <div class="tier-group"><div class="tier-label-row">Premium · 10€</div><div class="spirit-grid">
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="lux-row"><div><div class="s-logo"><img src="img/copas/zacapa.png" alt="Zacapa" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Zacapa</div><div class="s-origin">Ron guatemalteco envejecido a gran altitud</div></div><div class="s-price">10€</div></div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="lux-row"><div><div class="s-logo"><img src="img/copas/zacapa.png" style="--k:0.88" alt="Zacapa" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Zacapa</div><div class="s-origin">Ron guatemalteco envejecido a gran altitud</div></div><div class="s-price">10€</div></div></div>
       </div></div>
     </div>
   </div>
@@ -1234,12 +1237,12 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage" id="sp-copas-whisky">
     <div class="spirits-section">
       <div class="tier-group"><div class="tier-label-row">Selección · 6,5€</div><div class="spirit-grid">
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/red-label.svg" alt="Red Label" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Red Label</div><div class="s-origin">Blend escocés, sabor ahumado suave</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/red-label.svg" style="--k:1.12" alt="Red Label" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Red Label</div><div class="s-origin">Blend escocés, sabor ahumado suave</div><div class="s-price">6,5€</div></div>
       </div></div>
       <div class="tier-group"><div class="tier-label-row">Premium</div><div class="spirit-grid">
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo inv"><img src="img/copas/black-label.svg" alt="Black Label" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Black Label</div><div class="s-origin">12 años, sabor complejo y ahumado</div><div class="s-price">8,5€</div></div>
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/jack-daniels.svg" alt="Jack Daniel's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Jack Daniel's</div><div class="s-origin">Tennessee Whiskey, notas de vainilla</div><div class="s-price">8,5€</div></div>
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/macallan.svg" alt="The Macallan" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">The Macallan</div><div class="s-origin">Single malt escocés, icono mundial</div><div class="s-price">10€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo inv"><img src="img/copas/black-label.svg" style="--k:1.12" alt="Black Label" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Black Label</div><div class="s-origin">12 años, sabor complejo y ahumado</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/jack-daniels.svg" style="--k:0.85" alt="Jack Daniel's" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Jack Daniel's</div><div class="s-origin">Tennessee Whiskey, notas de vainilla</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/macallan.svg" style="--k:1.02" alt="The Macallan" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">The Macallan</div><div class="s-origin">Single malt escocés, icono mundial</div><div class="s-price">10€</div></div>
       </div></div>
     </div>
   </div>
@@ -1248,12 +1251,12 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage" id="sp-copas-vodka">
     <div class="spirits-section">
       <div class="tier-group"><div class="tier-label-row">Selección · 6,5€</div><div class="spirit-grid">
-        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/absolut.svg" alt="Absolut" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Absolut</div><div class="s-origin">Vodka sueco, puro y cristalino</div><div class="s-price">6,5€</div></div>
+        <div class="spirit-card"><span class="s-tier t-std">Selección</span><div class="s-logo"><img src="img/copas/absolut.svg" style="--k:0.85" alt="Absolut" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Absolut</div><div class="s-origin">Vodka sueco, puro y cristalino</div><div class="s-price">6,5€</div></div>
       </div></div>
       <div class="tier-group"><div class="tier-label-row">Premium · 8,5€</div><div class="spirit-grid">
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/grey-goose.svg" alt="Grey Goose" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Grey Goose</div><div class="s-origin">Vodka francés, trigo de la Beauce</div><div class="s-price">8,5€</div></div>
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/belvedere.svg" alt="Belvedere" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Belvedere</div><div class="s-origin">Vodka polaco, centeno Dankowskie</div><div class="s-price">8,5€</div></div>
-        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/ciroc-manzana.png" alt="Cîroc Manzana" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Cîroc Manzana</div><div class="s-origin">Vodka francés con toque de manzana</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/grey-goose.svg" style="--k:1.05" alt="Grey Goose" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Grey Goose</div><div class="s-origin">Vodka francés, trigo de la Beauce</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/belvedere.svg" style="--k:0.87" alt="Belvedere" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Belvedere</div><div class="s-origin">Vodka polaco, centeno Dankowskie</div><div class="s-price">8,5€</div></div>
+        <div class="spirit-card prem"><span class="s-tier t-prem">Premium</span><div class="s-logo"><img src="img/copas/ciroc-manzana.png" style="--k:0.98" alt="Cîroc Manzana" loading="lazy" onerror="this.closest('.s-logo').remove()"></div><div class="s-name">Cîroc Manzana</div><div class="s-origin">Vodka francés con toque de manzana</div><div class="s-price">8,5€</div></div>
       </div></div>
     </div>
   </div>
@@ -1262,10 +1265,10 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage" id="sp-copas-otros">
     <div class="spirits-section">
       <div class="otros-grid">
-        <div class="otro-card"><div class="otro-em"><img src="img/copas/jagermeister.png" alt="Jägermeister" loading="lazy" onerror="this.replaceWith(document.createTextNode('🖤'))"></div><div class="otro-name">Jägermeister</div><div class="otro-price">6,5€</div></div>
-        <div class="otro-card"><div class="otro-em"><img src="img/copas/licor-43.jpg" alt="Licor 43" loading="lazy" onerror="this.replaceWith(document.createTextNode('🟡'))"></div><div class="otro-name">Licor 43</div><div class="otro-price">6,5€</div></div>
-        <div class="otro-card"><div class="otro-em"><img src="img/copas/malibu.png" alt="Malibu" loading="lazy" onerror="this.replaceWith(document.createTextNode('🥥'))"></div><div class="otro-name">Malibu</div><div class="otro-price">6,5€</div></div>
-        <div class="otro-card"><div class="otro-em"><img src="img/copas/jose-cuervo.svg" alt="Jose Cuervo" loading="lazy" onerror="this.replaceWith(document.createTextNode('🌵'))"></div><div class="otro-name">Jose Cuervo</div><div class="otro-price">6,5€</div></div>
+        <div class="otro-card"><div class="otro-em"><img src="img/copas/jagermeister.svg" style="--k:0.85" alt="Jägermeister" loading="lazy" onerror="this.replaceWith(document.createTextNode('🖤'))"></div><div class="otro-name">Jägermeister</div><div class="otro-price">6,5€</div></div>
+        <div class="otro-card"><div class="otro-em"><img src="img/copas/licor-43.jpg" style="--k:0.89" alt="Licor 43" loading="lazy" onerror="this.replaceWith(document.createTextNode('🟡'))"></div><div class="otro-name">Licor 43</div><div class="otro-price">6,5€</div></div>
+        <div class="otro-card"><div class="otro-em"><img src="img/copas/malibu.png" style="--k:1.04" alt="Malibu" loading="lazy" onerror="this.replaceWith(document.createTextNode('🥥'))"></div><div class="otro-name">Malibu</div><div class="otro-price">6,5€</div></div>
+        <div class="otro-card"><div class="otro-em"><img src="img/copas/jose-cuervo.svg" style="--k:0.85" alt="Jose Cuervo" loading="lazy" onerror="this.replaceWith(document.createTextNode('🌵'))"></div><div class="otro-name">Jose Cuervo</div><div class="otro-price">6,5€</div></div>
       </div>
       <div class="chupito-card">
         <div class="chupito-left"><div class="chupito-em">🥂</div><div><div class="chupito-badge">Por unidad</div><div class="chupito-name">Chupitos</div><div class="chupito-sub">Pregunta por nuestra selección</div></div></div>
