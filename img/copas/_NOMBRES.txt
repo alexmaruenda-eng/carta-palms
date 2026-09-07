@@ -1,0 +1,32 @@
+Imagenes de esta carpeta. Nombres EXACTOS (minusculas, guiones y extension).
+
+[OK]         ya esta en el repositorio
+[FALTA]      pendiente de anadir la foto/logo
+[REEMPLAZAR] existe pero el cliente pidio uno nuevo
+
+[OK]         absolut.svg
+[FALTA]      barcelo.png
+[OK]         belvedere.svg
+[OK]         black-label.svg
+[FALTA]      brugal.png
+[FALTA]      ciroc-manzana.png
+[OK]         grey-goose.svg
+[FALTA]      hendricks.png
+[OK]         jack-daniels.svg
+[FALTA]      jagermeister.png
+[OK]         jose-cuervo.svg
+[OK]         licor-43.jpg
+[OK]         macallan.svg
+[OK]         malibu.png
+[FALTA]      martin-millers.png
+[FALTA]      matusalem.png
+[FALTA]      nordes.png
+[FALTA]      puerto-indias-fresa.png
+[FALTA]      puerto-indias-melon.png
+[OK]         red-label.svg
+[OK]         seagrams.svg
+[OK]         zacapa.png
+
+NOTA: Logos de marca. Formato ideal: PNG con fondo transparente o SVG.
+OJO: las tarjetas PREMIUM tienen fondo OSCURO -> el logo debe ser claro/blanco.
+Las de SELECCION tienen fondo claro -> el logo debe ser oscuro.
