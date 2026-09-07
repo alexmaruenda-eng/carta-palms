@@ -1,23 +1,30 @@
-Pon aqui las fotos (jpg). Nombres EXACTOS (respeta minusculas y guiones):
+Imagenes de esta carpeta. Nombres EXACTOS (minusculas, guiones y extension).
 
-bolas-pollo.jpg
-bolas-queso.jpg
-fingers-pollo.jpg
-tequenos.jpg
-alitas-kfc.jpg
-aros-cebolla.jpg
-empanada.jpg
-patatas-4-salsas.jpg
-bacon-cheese-fries.jpg
-patatas-kebab.jpg
-hamburguesa-pollo.jpg
-smash-pollo.jpg
-hamburguesa-ternera.jpg
-smash-ternera.jpg
-burrito.jpg
-kebab.jpg
-sandwich-trufado.jpg
-taco-frances.jpg
-ensalada-cesar.jpg
-quesadillas.jpg
-gofre.jpg
+[OK]         ya esta en el repositorio
+[FALTA]      pendiente de anadir la foto/logo
+[REEMPLAZAR] existe pero el cliente pidio uno nuevo
+
+[OK]         alitas.jpg
+[OK]         aros de cebolla.jpg
+[REEMPLAZAR] bolas de pollo.jpg   <- Bolas de Pollo + Bolas de Queso (comparten foto)
+[OK]         burrito palms.jpg
+[OK]         combo.jpg
+[OK]         empanada argentina.jpg
+[OK]         ensalada.jpg
+[FALTA]      gofre.jpg
+[REEMPLAZAR] hamburguesa de pollo.jpg   <- Hamburguesa Pollo
+[REEMPLAZAR] hamburguesa de ternera.jpg   <- Hamburguesa Ternera
+[OK]         kebap.jpg
+[OK]         patatas 4 salsas.jpg
+[OK]         patatas bacon queso.jpg
+[OK]         patatas kebap.jpg
+[OK]         quesadilla.jpg
+[OK]         sandwich trufado.jpg
+[REEMPLAZAR] shamsh de pollo.jpg   <- Smash Pollo
+[REEMPLAZAR] shamsh de ternera.jpg   <- Smash Ternera
+[OK]         taco.jpg
+[OK]         tequeños.jpg
+[OK]         tiras de pollo.jpg
+
+NOTA: El cliente pidio fotos NUEVAS de las marcadas [REEMPLAZAR].
+"bolas de  queso.jpg" (doble espacio) ya no se usa.
