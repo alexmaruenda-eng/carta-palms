@@ -1163,16 +1163,7 @@ button{cursor:pointer;font-family:'Outfit',sans-serif}
   <div class="subpage" id="sp-bebidas-teteras">
     <div class="bev-section">
       <div class="tet-card">
-        <div class="tet-head">
-          <div class="tet-photo"><img src="img/bebidas/tetera.png" alt="Tetera" loading="lazy" onerror="this.closest('.tet-photo').remove()"></div>
-          <div class="tet-title">🫖 Teteras</div>
-          <div class="tet-prices">
-            <div class="tet-p"><div class="tet-pval">3€</div><div class="tet-plab">Vaso</div></div>
-            <div class="tet-divider"></div>
-            <div class="tet-p"><div class="tet-pval">8€</div><div class="tet-plab">Entera</div></div>
-          </div>
-        </div>
-        <div class="tet-flavors">
+        <div class="tet-hero"><img src="img/bebidas/tetera.png" alt="Tetera de te" loading="lazy" onerror="this.remove()"><div class="tet-grad"></div><div class="tet-over"><div class="tet-title">🫖 Teteras</div><div class="tet-prices"><div class="tet-p"><div class="tet-pval">3€</div><div class="tet-plab">Vaso</div></div><div class="tet-divider"></div><div class="tet-p"><div class="tet-pval">8€</div><div class="tet-plab">Entera</div></div></div></div></div><div class="tet-flabel">Sabores</div><div class="tet-flavors">
           <div class="tet-fl">🌿 Té Moruno</div><div class="tet-fl">🌼 Manzanilla</div><div class="tet-fl">🍓 Fruit Explosion</div><div class="tet-fl">🫚 Chai Latte</div><div class="tet-fl">🍞 Torrija</div>
         </div>
       </div>
@@ -1489,5 +1480,22 @@ window.addEventListener('scroll', () => {
   document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
 });
 </script>
+<style>
+/* Teteras - tarjeta rehecha en el lenguaje de las fichas de coctel */
+.tet-card{padding:0;overflow:hidden}
+.tet-hero{position:relative;height:240px;overflow:hidden;background:linear-gradient(135deg,#0A2E12,#050F07)}
+.tet-hero img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.23,1,.32,1)}
+.tet-card:hover .tet-hero img,.tet-card:active .tet-hero img{transform:scale(1.06)}
+.tet-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,7,.96) 0%,rgba(5,15,7,.35) 55%,rgba(5,15,7,.05) 100%)}
+.tet-over{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;display:flex;align-items:flex-end;justify-content:space-between;gap:18px}
+.tet-title{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:700;color:#fff;line-height:1.05}
+.tet-prices{display:flex;gap:14px;align-items:center}
+.tet-pval{font-family:"Cormorant Garamond",serif;font-size:23px;font-weight:700;color:var(--gold)}
+.tet-plab{font-size:8.5px;color:rgba(255,255,255,.45);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+.tet-divider{width:1px;height:32px;background:rgba(201,168,76,.25)}
+.tet-flabel{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:.8;padding:18px 20px 0}
+.tet-flavors{padding:10px 20px 20px}
+@media(max-width:560px){.tet-hero{height:185px}.tet-title{font-size:25px}.tet-over{padding:14px 16px;gap:12px}.tet-flabel{padding:15px 16px 0}.tet-flavors{padding:9px 16px 17px}}
+</style>
 </body>
 </html>
