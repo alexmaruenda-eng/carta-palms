@@ -1500,15 +1500,15 @@ window.addEventListener('scroll', () => {
 </style>
 <style>
 /* Tinto de verano preparado - ficha destacada, foto vertical a la izquierda */
-.tv-card{display:flex;align-items:stretch;background:var(--g1);border:1px solid rgba(201,168,76,.18);border-radius:var(--r3);overflow:hidden;box-shadow:0 6px 26px rgba(0,0,0,.22);margin-top:16px}
-.tv-photo{width:165px;flex:none;align-self:stretch;min-height:200px;overflow:hidden;background:linear-gradient(135deg,#0A2E12,#050F07)}
+.tv-card{display:flex;align-items:stretch;background:var(--g1);border:1px solid rgba(201,168,76,.18);border-radius:var(--r3);overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.2);margin-top:14px}
+.tv-photo{width:128px;flex:none;align-self:stretch;min-height:155px;overflow:hidden;background:linear-gradient(135deg,#0A2E12,#050F07)}
 .tv-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.23,1,.32,1)}
 .tv-card:hover .tv-photo img,.tv-card:active .tv-photo img{transform:scale(1.06)}
-.tv-body{flex:1;min-width:0;padding:20px 18px 20px 24px;display:flex;flex-direction:column;justify-content:center;gap:8px}
-.tv-name{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:700;color:#fff;line-height:1.08}
-.tv-sub{font-size:12px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.5}
-.tv-price{flex:none;display:flex;align-items:center;padding:0 26px;font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:700;color:var(--gold);white-space:nowrap}
-@media(max-width:560px){.tv-photo{width:118px;min-height:170px}.tv-body{padding:15px 10px 15px 16px;gap:5px}.tv-name{font-size:21px}.tv-sub{font-size:11px}.tv-price{padding:0 15px;font-size:24px}}
+.tv-body{flex:1;min-width:0;padding:14px 14px 14px 18px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+.tv-name{font-family:"Cormorant Garamond",serif;font-size:23px;font-weight:700;color:#fff;line-height:1.08}
+.tv-sub{font-size:11.5px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.45}
+.tv-price{flex:none;display:flex;align-items:center;padding:0 20px;font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:700;color:var(--gold);white-space:nowrap}
+@media(max-width:560px){.tv-photo{width:102px;min-height:134px}.tv-body{padding:12px 8px 12px 14px;gap:4px}.tv-name{font-size:18.5px}.tv-sub{font-size:10.5px}.tv-price{padding:0 13px;font-size:21px}}
 </style>
 </body>
 </html>
